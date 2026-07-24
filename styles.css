@@ -410,6 +410,15 @@ h3 {
   font-size: 1.08rem;
 }
 
+#about .section-label {
+  font-size: 0.9rem;
+}
+
+#about .prose {
+  font-size: clamp(1.2rem, 2vw, 1.35rem);
+  line-height: 1.75;
+}
+
 .prose p:last-child,
 .publication-panel p:last-child {
   margin-bottom: 0;
@@ -429,7 +438,7 @@ h3 {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 }
 

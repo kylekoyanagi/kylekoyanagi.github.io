@@ -396,6 +396,35 @@ h3 {
   background: var(--purple-050);
 }
 
+.section-label-main {
+  margin-bottom: 1.2rem;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  letter-spacing: 0.13em;
+}
+
+.research-heading {
+  text-align: center;
+}
+
+.research-interests {
+  width: fit-content;
+  margin: 2.25rem auto 0;
+  padding-left: 1.5rem;
+  color: var(--ink);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.research-interests li + li {
+  margin-top: 0.85rem;
+}
+
+.research-interests li::marker {
+  color: var(--purple-700);
+}
+
 .content-grid,
 .contact-grid {
   display: grid;
@@ -408,15 +437,6 @@ h3 {
   max-width: 740px;
   color: var(--muted);
   font-size: 1.08rem;
-}
-
-#about .section-label {
-  font-size: 0.9rem;
-}
-
-#about .prose {
-  font-size: clamp(1.2rem, 2vw, 1.35rem);
-  line-height: 1.75;
 }
 
 .prose p:last-child,
@@ -436,38 +456,30 @@ h3 {
   color: var(--muted);
 }
 
-.research-heading {
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-.research-heading .section-label {
-  justify-content: center;
-}
-
-.research-interests {
+.card-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  max-width: 900px;
-  margin-inline: auto;
 }
 
-.research-interest {
-  display: grid;
-  min-height: 150px;
-  padding: 1.75rem;
-  place-items: center;
-  text-align: center;
+.research-card {
+  min-height: 290px;
+  padding: 1.6rem;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 1rem;
   box-shadow: 0 10px 24px rgba(43, 38, 47, 0.05);
 }
 
-.research-interest h3 {
-  max-width: 22ch;
-  margin: 0;
+.research-card p {
+  color: var(--muted);
+}
+
+.card-number {
+  margin-bottom: 3rem;
+  color: var(--purple-700);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
 }
 
 .publication-panel {
@@ -613,13 +625,16 @@ h3 {
     right: -0.25rem;
   }
 
-  .research-interests {
+  .card-grid {
     grid-template-columns: 1fr;
-    max-width: 560px;
   }
 
-  .research-interest {
-    min-height: 120px;
+  .research-card {
+    min-height: auto;
+  }
+
+  .card-number {
+    margin-bottom: 1.75rem;
   }
 }
 

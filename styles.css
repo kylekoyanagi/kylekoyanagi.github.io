@@ -436,30 +436,38 @@ h3 {
   color: var(--muted);
 }
 
-.card-grid {
+.research-heading {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.research-heading .section-label {
+  justify-content: center;
+}
+
+.research-interests {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
+  max-width: 900px;
+  margin-inline: auto;
 }
 
-.research-card {
-  min-height: 290px;
-  padding: 1.6rem;
+.research-interest {
+  display: grid;
+  min-height: 150px;
+  padding: 1.75rem;
+  place-items: center;
+  text-align: center;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 1rem;
   box-shadow: 0 10px 24px rgba(43, 38, 47, 0.05);
 }
 
-.research-card p {
-  color: var(--muted);
-}
-
-.card-number {
-  margin-bottom: 3rem;
-  color: var(--purple-700);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.4rem;
+.research-interest h3 {
+  max-width: 22ch;
+  margin: 0;
 }
 
 .publication-panel {
@@ -605,16 +613,13 @@ h3 {
     right: -0.25rem;
   }
 
-  .card-grid {
+  .research-interests {
     grid-template-columns: 1fr;
+    max-width: 560px;
   }
 
-  .research-card {
-    min-height: auto;
-  }
-
-  .card-number {
-    margin-bottom: 1.75rem;
+  .research-interest {
+    min-height: 120px;
   }
 }
 
